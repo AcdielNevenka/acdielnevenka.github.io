@@ -1,20 +1,9 @@
-// Esperar a que la página cargue completamente
 document.addEventListener("DOMContentLoaded", function() {
-    let popup = document.getElementById("popup");
-    let openPopupBtn = document.getElementById("openPopupBtn");
-    let closePopupBtn = document.querySelector(".close-btn");
+    let popupModal = new bootstrap.Modal(document.getElementById("popupModal"));
 
-    // Ocultar popup al inicio
-    popup.style.display = "none";
-
-    // Mostrar el popup solo al hacer clic en el botón principal
-    openPopupBtn.addEventListener("click", function() {
-        popup.style.display = "flex";
-    });
-
-    // Cerrar el popup al hacer clic en la "X"
-    closePopupBtn.addEventListener("click", function() {
-        popup.style.display = "none";
+    // Mostrar el modal al hacer clic en el botón principal
+    document.getElementById("openPopupBtn").addEventListener("click", function() {
+        popupModal.show();
     });
 
     // Redirigir a la página del girasol al hacer clic en el botón "Girasol"
