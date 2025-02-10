@@ -21,7 +21,7 @@ body {
     width: 400px;
 }
 
-/* Botón interactivo */
+/* Botones */
 button {
     background: #ff4e50;
     color: white;
@@ -30,6 +30,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
+    margin: 5px;
     transition: 0.3s;
 }
 
@@ -37,23 +38,47 @@ button:hover {
     background: #fc6767;
 }
 
-/* Mensaje oculto */
-.hidden {
+/* Ocultar popup por defecto */
+.popup {
     display: none;
-    margin-top: 20px;
-    font-size: 18px;
-    color: #ff4e50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* RESPONSIVIDAD: Ajustes para iPhone X y iPad */
+/* Estilos del contenido del popup */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Responsivo para iPhone y iPad */
 @media screen and (max-width: 375px) { /* iPhone X */
-    .container {
-        width: 95%;
+    .popup-content {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 768px) { /* iPad */
-    .container {
-        width: 80%;
+    .popup-content {
+        width: 60%;
     }
 }
