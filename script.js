@@ -10,4 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("sunflowerBtn").addEventListener("click", function() {
         window.location.href = "sunflower.html";
     });
+
+    document.getElementById("chatbotBtn").addEventListener("click", function () {
+        window.location.href = "chatbot.html";
+    });
+    
+    document.getElementById("button3").addEventListener("click", function () {
+        window.location.href = "memoria.html";
+    });
+    
 });

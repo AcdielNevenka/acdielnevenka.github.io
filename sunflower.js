@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function drawSunflower() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Dibujo progresivo de pétalos
+        // 🌱 Dibujar el tallo primero
+        drawStem(ctx);
+
+        // 🌻 Dibujo progresivo de pétalos
         let petals = 0;
         let interval = setInterval(() => {
             petals++;
@@ -16,6 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 drawCenter(ctx); // Dibuja el centro del girasol al final
             }
         }, 300);
+    }
+
+    function drawStem(ctx) {
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.moveTo(150, 180);
+        ctx.lineTo(150, 350);
+        ctx.stroke();
+
+        // 🍃 Dibujar hojas en el tallo
+        ctx.fillStyle = "green";
+
+        // Hoja izquierda
+        ctx.beginPath();
+        ctx.ellipse(120, 250, 25, 40, Math.PI / 4, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // Hoja derecha
+        ctx.beginPath();
+        ctx.ellipse(180, 300, 25, 40, -Math.PI / 4, 0, 2 * Math.PI);
+        ctx.fill();
     }
 
     function drawPetal(ctx, petalNumber) {
