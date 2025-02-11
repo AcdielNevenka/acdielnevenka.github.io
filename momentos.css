@@ -1,0 +1,136 @@
+/* Fondo general */
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.content-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Título */
+h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta donde está el buscador y video */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del input */
+input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Botón */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff758c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5c72;
+}
+
+/* Ajuste del contenedor de video */
+#video-container {
+    margin-top: 15px;
+    display: none; /* Oculto hasta que se haga una búsqueda */
+    text-align: center;
+}
+
+/* Estilo del video para que sea más pequeño como en TikTok */
+video {
+    width: 250px;  /* Ajusta el ancho */
+    height: 444px; /* Relación 9:16 */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Contenedor Principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Espacio entre el container principal y la mini card */
+    flex-wrap: wrap;
+}
+
+/* Contenedor del video y búsqueda */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mini Container separado */
+.mini-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Mini Card */
+.mini-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 200px;
+}
+
+/* Lista de palabras */
+.mini-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mini-card li {
+    background: #f8f8f8;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mini-card li:hover {
+    background: #ffcccb;
+}
+
+/* Responsive: en móviles, la mini card se coloca debajo */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mini-container {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Momentos</title>
+    <link rel="stylesheet" href="momentos.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Contenedor Principal -->
+        <div class="container">
+            
+            <div class="card">
+                <p>Escribe una palabra y revive un hermoso recuerdo 💖</p>
+                <input type="text" id="searchInput" placeholder="Ejemplo: año nuevo, gorila...">
+                <button onclick="searchVideo()">Buscar</button>
+                <button onclick="window.history.back()">Volver</button>
+    
+                <!-- Contenedor del video -->
+                <div id="video-container">
+                    <video id="videoPlayer" controls></video>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mini Container para la lista de palabras -->
+        <div class="mini-container">
+            <div class="mini-card">
+                <h3>Palabras disponibles 📌</h3>
+                <ul id="wordList"></ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="momentos.js"></script>
+</body>
+</html>
