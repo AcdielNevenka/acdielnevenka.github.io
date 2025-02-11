@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     document.getElementById("button4").addEventListener("click", function () {
-        window.location.href = "video.html";
+        window.location.href = "video2.html";
     });
 });
