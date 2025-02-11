@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     document.getElementById("button4").addEventListener("click", function () {
-        window.location.href = "flappy.html";
+        window.location.href = "video.html";
     });
 });
