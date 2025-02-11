@@ -19,4 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "memoria.html";
     });
     
+    document.getElementById("button4").addEventListener("click", function () {
+        window.location.href = "flappy.html";
+    });
 });
