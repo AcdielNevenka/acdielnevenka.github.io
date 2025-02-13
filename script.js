@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
         popupModal.show();
     });
 
+    document.getElementById("songButton").addEventListener("click", function() {
+        window.location.href = "cancion.html";
+    });
+
     // Redirigir a la página del girasol al hacer clic en el botón "Girasol"
     document.getElementById("sunflowerBtn").addEventListener("click", function() {
         window.location.href = "sunflower.html";
