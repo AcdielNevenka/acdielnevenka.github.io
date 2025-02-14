@@ -11,6 +11,31 @@ document.addEventListener("DOMContentLoaded", function() {
     calcularDiasJuntos();
     
     let popupModal = new bootstrap.Modal(document.getElementById("popupModal"));
+    let popupBienvenida = document.getElementById("popupBienvenida");
+
+    // Mostrar popup al cargar la página
+    popupBienvenida.style.display = "flex";
+
+    // Función para mostrar la animación de carga
+    window.mostrarCarga = function() {
+        document.getElementById("botonesPopup").style.display = "none";
+        document.getElementById("pantallaCarga").classList.remove("oculto");
+
+        let progressBar = document.getElementById("barraCarga");
+        let progress = 0;
+        
+        let intervalo = setInterval(function() {
+            progress += 10;
+            progressBar.style.width = progress + "%";
+
+            if (progress >= 100) {
+                clearInterval(intervalo);
+                setTimeout(() => {
+                    popupBienvenida.style.display = "none"; // Ocultar popup
+                }, 500);
+            }
+        }, 300);
+    };
 
     // Mostrar el modal al hacer clic en el botón principal
     document.getElementById("openPopupBtn").addEventListener("click", function() {
@@ -41,6 +66,11 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("button5").addEventListener("click", function () {
         window.location.href = "momentos.html";
     });
+
+    // Función para cerrar el popup inicial
+    window.cerrarPopup = function() {
+        document.getElementById("valentine-popup").style.display = "none";
+    }
 
     
 });

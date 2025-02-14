@@ -11,6 +11,29 @@
 </head>
 <body class="bg-light text-center">
 
+    
+     <!-- Popup inicial -->
+    <div id="popupBienvenida" class="popup">
+        <div class="popup-content">
+            <h2>¿Quieres ser mi San Valentín? 💖</h2>
+            <img src="videos/stitch.gif" alt="Gif de Stitch" class="gif-stitch">
+            <div id="botonesPopup">
+                <button class="btn btn-primary btn-popup" onclick="mostrarCarga()">Sí 💕</button>
+                <button class="btn btn-primary btn-popup" onclick="mostrarCarga()">Sí 💕</button>
+            </div>
+
+            <!-- Nueva pantalla de carga -->
+            <div id="pantallaCarga" class="oculto">
+                <img src="videos/stitch2.gif" alt="Gif Cargando" class="gif-stitch">
+                <p>Cargando tu regalo...</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                        style="width: 0%;" id="barraCarga"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="contador-dias">
         💖 Llevamos juntos <span id="diasJuntos"></span> días 💖
     </div>
